@@ -1,0 +1,26 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\sistema-tech_2.13-0.1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\modelos\Cliente$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\modelos\Cliente$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\modelos\Cliente.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\modelos\Cliente.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\modelos\Producto$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\modelos\Producto$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\modelos\Producto.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\modelos\Producto.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\servicios\ClienteService$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\servicios\ClienteService$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\servicios\ClienteService.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\servicios\ClienteService.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\servicios\ProductoService$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\servicios\ProductoService$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	app\servicios\ProductoService.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\target\out\jvm\scala-2.13.12\sistema-tech\classes\app\servicios\ProductoService.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
+[0m[[0m[0mdebug[0m] [0m[0mwrote ${OUT}/jvm/scala-2.13.12/sistema-tech/sistema-tech_2.13-0.1.0.jar[0m
