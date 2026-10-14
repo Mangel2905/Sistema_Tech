@@ -1,10 +1,8 @@
-% ============================================
 % hechos.pl
 % Base de conocimientos del sistema
 % Define los hechos sobre productos y clientes
-% ============================================
 
-% --- PRECIOS de productos ---
+% --- precios de productos ---
 precio(laptop_lenovo, 1800).
 precio(laptop_hp, 1500).
 precio(laptop_asus, 1900).
@@ -21,7 +19,7 @@ precio(samsung_watch, 750).
 precio(teclado_redragon, 250).
 precio(mouse_logitech, 180).
 
-% --- CATEGORÍAS de productos ---
+% --- categorias de productos ---
 categoria(laptop_lenovo, laptop).
 categoria(laptop_hp, laptop).
 categoria(laptop_asus, laptop).
@@ -38,7 +36,7 @@ categoria(samsung_watch, smartwatch).
 categoria(teclado_redragon, accesorio).
 categoria(mouse_logitech, accesorio).
 
-% --- USO de productos ---
+% --- uso de productos ---
 uso(laptop_lenovo, estudio).
 uso(laptop_hp, estudio).
 uso(laptop_asus, trabajo).
@@ -55,7 +53,7 @@ uso(samsung_watch, casual).
 uso(teclado_redragon, gaming).
 uso(mouse_logitech, gaming).
 
-% --- CLIENTES de prueba ---
+% --- clientes de prueba ---
 presupuesto(mangel, 2000).
 categoria_cliente(mangel, laptop).
 uso_cliente(mangel, estudio).

@@ -188,3 +188,364 @@ WARNING: Unmatched cancel notification for request id 228
 2026.10.07 22:55:30 INFO  Memory monitor stopped
 2026.10.07 22:55:30 INFO  shutting down Metals
 2026.10.07 22:55:30 INFO  Exiting server
+2026.10.07 23:02:20 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech' for client Visual Studio Code 1.140.0.
+2026.10.07 23:02:21 INFO  Memory monitor started
+2026.10.07 23:02:25 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.10.07 23:08:08 WARN  no build target for: C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala
+2026.10.07 23:08:08 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.07 23:45:41 INFO  Shutting down server
+2026.10.07 23:45:41 INFO  Memory monitor stopped
+2026.10.07 23:45:41 INFO  shutting down Metals
+2026.10.07 23:45:41 INFO  Exiting server
+2026.10.11 16:04:35 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech' for client Visual Studio Code 1.140.0.
+2026.10.11 16:04:35 INFO  Memory monitor started
+2026.10.11 16:04:39 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+oct. 11, 2026 4:05:07 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.10.11 16:05:35 WARN  no build target for: C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala
+2026.10.11 16:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.11 16:05:35 INFO  Shutting down server
+2026.10.11 16:05:35 INFO  Memory monitor stopped
+2026.10.11 16:05:35 INFO  shutting down Metals
+2026.10.11 16:05:36 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.10.13 18:05:19 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech' for client Visual Studio Code 1.141.0.
+2026.10.13 18:05:19 INFO  Memory monitor started
+2026.10.13 18:05:25 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.10.13 18:05:25 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:26 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:30 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:30 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:30 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:30 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:32 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:32 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2026.10.13 18:05:32 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:32 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:32 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:33 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:33 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 16
+2026.10.13 18:05:33 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:33 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:34 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+oct. 13, 2026 6:05:34 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+oct. 13, 2026 6:05:34 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 23
+2026.10.13 18:05:34 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:34 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 20
+2026.10.13 18:05:34 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:34 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 27
+2026.10.13 18:05:34 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:34 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 28
+2026.10.13 18:05:34 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:34 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:35 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 29
+oct. 13, 2026 6:05:35 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 21
+2026.10.13 18:05:34 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:35 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 25
+2026.10.13 18:05:34 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:35 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 38
+2026.10.13 18:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:36 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 34
+oct. 13, 2026 6:05:36 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 42
+2026.10.13 18:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:36 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 45
+2026.10.13 18:05:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:36 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:36 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 47
+2026.10.13 18:05:36 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:36 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:36 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:36 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:38 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 52
+2026.10.13 18:05:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:39 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:39 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:41 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:41 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:41 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:42 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 65
+2026.10.13 18:05:41 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:41 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:41 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:42 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:43 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 69
+2026.10.13 18:05:42 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:42 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:42 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:43 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:45 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:45 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:45 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:46 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:46 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:48 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:48 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:48 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:48 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 90
+2026.10.13 18:05:48 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:49 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:49 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:49 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:49 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:49 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:49 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:51 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:52 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:54 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:55 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:55 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:55 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:57 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:57 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:57 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:57 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 120
+2026.10.13 18:05:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 122
+2026.10.13 18:05:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 123
+2026.10.13 18:05:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 124
+2026.10.13 18:05:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 125
+2026.10.13 18:05:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 126
+2026.10.13 18:05:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:59 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:05:59 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 130
+2026.10.13 18:05:59 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:59 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:05:59 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:00 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:00 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:00 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:00 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:01 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:01 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:01 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:02 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 146
+2026.10.13 18:06:02 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:01 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:02 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:02 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:04 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:04 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:04 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:05 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:05 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:05 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:05 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:05 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:07 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:07 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:07 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:07 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:07 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 170
+2026.10.13 18:06:07 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:07 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 171
+2026.10.13 18:06:07 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:07 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:08 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:08 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:08 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:08 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:11 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:11 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:11 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:11 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+Exception in thread "pool-85-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:208)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026.10.13 18:06:11 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:11 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:12 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:12 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:12 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:12 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:13 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 193
+2026.10.13 18:06:13 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:13 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:13 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:13 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:14 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:15 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:15 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:15 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:16 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:16 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:16 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 207
+2026.10.13 18:06:16 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:17 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:17 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:17 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:17 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:17 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:19 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:19 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:19 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:19 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:19 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 220
+2026.10.13 18:06:19 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:19 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:20 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:20 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:20 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:20 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:21 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\Main.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:22 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:23 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 234
+2026.10.13 18:06:23 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:22 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:24 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:24 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:26 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:26 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:27 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:28 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:28 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:28 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:29 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:32 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:32 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:34 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:36 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:35 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:36 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:38 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 276
+2026.10.13 18:06:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:38 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 280
+2026.10.13 18:06:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:40 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:40 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:41 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:41 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:43 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:43 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:46 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:46 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:46 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:46 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:47 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:47 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:48 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:49 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:48 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:48 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:49 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Producto.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:51 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ClienteService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:51 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 317
+2026.10.13 18:06:51 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ClienteService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:54 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ClienteService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:57 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:57 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:57 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 325
+2026.10.13 18:06:57 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:06:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 328
+2026.10.13 18:06:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:06:58 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:02 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:04 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:04 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:04 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:04 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:05 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:05 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:07 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:07:08 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:11 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:11 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\servicios\ProductoService.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:13 WARN  no build target for: C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala
+2026.10.13 18:15:14 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:15 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:15 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:16 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:27 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:27 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:28 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:28 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:29 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:31 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:32 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:15:32 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:16:28 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+oct. 13, 2026 6:16:57 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+oct. 13, 2026 6:16:58 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.10.13 18:17:05 WARN  no build target for: C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala
+2026.10.13 18:17:06 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 18:17:12 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:17:21 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.10.13 18:54:31 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+oct. 13, 2026 6:54:51 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+oct. 13, 2026 6:54:56 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+oct. 13, 2026 6:54:58 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+oct. 13, 2026 6:54:59 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.10.13 18:55:06 WARN  no build target for: C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala
+2026.10.13 18:55:06 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 19:16:38 WARN  no build target for: C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala
+2026.10.13 19:16:38 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8
+2026.10.13 19:16:40 WARN  no build target for: C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala
+2026.10.13 19:16:40 INFO  no build target found for C:\Users\Mangel\Documents\AGOSTO 2026\LENGUAJES DE PROGRAMACION\Sistema_Tech\scala\src\main\scala\app\modelos\Cliente.scala. Using presentation compiler with project's scala-library version: 3.3.8

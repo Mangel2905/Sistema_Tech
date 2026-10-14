@@ -1,9 +1,3 @@
-// ============================================
-// Main.scala
-// Punto de entrada principal del sistema
-// Gestiona el flujo de interacción con
-// el usuario por consola
-// ============================================
 
 package app
 
@@ -13,24 +7,24 @@ import scala.io.StdIn.readLine
 
 object Main extends App {
 
-  // Bienvenida
+  // INICIO
   println("====================================")
-  println("  Sistema de Recomendación Tech 🤖")
+  println("  Sistema de Recomendacion Tech")
   println("====================================")
 
-  // Solicitar datos del cliente
+  // Ingreso de datos
   val nombre      = readLine("Ingresa tu nombre: ")
   val presupuesto = readLine("Presupuesto en soles: ").toInt
-  val categoria   = readLine("Categoría (laptop/celular/tablet/audifono/smartwatch/accesorio): ")
+  val categoria   = readLine("Categoria (laptop/celular/tablet/audifono/smartwatch/accesorio): ")
   val uso         = readLine("Uso (estudio/trabajo/gaming/casual): ")
 
-  // Crear cliente con los datos ingresados
+  // Creacion del cliente
   val cliente = Cliente(nombre, presupuesto, categoria, uso)
 
-  // Mostrar datos del cliente
+  // Mostrar cliente
   ClienteService.mostrar(cliente)
 
-  // Catálogo de productos tecnológicos
+  // Catalogo
   val productos = List(
     // Laptops
     Producto("Laptop Lenovo IdeaPad", "Lenovo", 1800, "laptop", "estudio"),
@@ -55,9 +49,9 @@ object Main extends App {
     Producto("Mouse Logitech G305",   "Logitech", 180, "accesorio", "gaming")
   )
 
-  // Filtrar productos según perfil del cliente
+  // FILTRAR
   val filtrados = ProductoService.filtrar(productos, cliente)
 
-  // Mostrar productos filtrados
+  // MOSTRAR FILTRADOS
   ProductoService.mostrar(filtrados)
 }

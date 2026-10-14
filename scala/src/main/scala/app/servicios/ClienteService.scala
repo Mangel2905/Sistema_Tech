@@ -1,8 +1,3 @@
-// ============================================
-// ClienteService.scala
-// Servicio que gestiona las operaciones
-// relacionadas al cliente
-// ============================================
 
 package app.servicios
 
