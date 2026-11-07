@@ -1,0 +1,12 @@
+# sbt / scala
+scala/.bloop/
+scala/target/
+scala/project/target/
+scala/project/project/
+
+# python
+__pycache__/
+*.pyc
+
+# prolog
+*.qlf
