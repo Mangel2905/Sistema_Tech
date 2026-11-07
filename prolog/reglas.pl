@@ -1,25 +1,48 @@
-% reglas.pl
-% Reglas lógicas de recomendación
-% Define cuándo un producto es recomendado
-% para un cliente según su perfil
-
-% Cargar hechos
+% reglas.pl - Reglas de recomendacion
 :- consult('hechos.pl').
 
-% regla 1 por presupuesto y categoria
-recomendar(Cliente, Producto) :-
-    presupuesto(Cliente, Monto),
-    precio(Producto, Precio),
-    Precio =< Monto,
-    categoria_cliente(Cliente, Cat),
-    categoria(Producto, Cat).
+disponible(P) :-
+    stock(P, S), S > 0.
 
-% regla 2 por presupuesto, categoria y uso
-recomendar_por_uso(Cliente, Producto) :-
-    presupuesto(Cliente, Monto),
-    precio(Producto, Precio),
-    Precio =< Monto,
+cumple_marca(_, Cliente) :-
+    marca_cliente(Cliente, ninguna), !.
+cumple_marca(P, Cliente) :-
+    marca_cliente(Cliente, M),
+    marca(P, M).
+
+recomendar(Cliente, P) :-
+    presupuesto_cliente(Cliente, Monto),
     categoria_cliente(Cliente, Cat),
-    categoria(Producto, Cat),
     uso_cliente(Cliente, Uso),
-    uso(Producto, Uso).
+    precio(P, Precio),
+    Precio =< Monto,
+    categoria(P, Cat),
+    uso(P, Uso),
+    disponible(P),
+    cumple_marca(P, Cliente).
+
+alternativa(Cliente, P) :-
+    presupuesto_cliente(Cliente, Monto),
+    categoria_cliente(Cliente, Cat),
+    uso_cliente(Cliente, Uso),
+    Limite is round(Monto * 1.2),
+    precio(P, Precio),
+    Precio > Monto,
+    Precio =< Limite,
+    categoria(P, Cat),
+    uso(P, Uso),
+    disponible(P),
+    cumple_marca(P, Cliente).
+
+sugerir_extra(P) :-
+    categoria(P, accesorio),
+    precio(P, Precio),
+    Precio =< 500,
+    disponible(P).
+
+listar_categoria(Cat, P) :-
+    categoria(P, Cat),
+    disponible(P).
+
+tiene_stock(P) :-
+    stock(P, S), S > 0.

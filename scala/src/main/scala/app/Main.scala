@@ -1,57 +1,94 @@
-
 package app
 
-import app.modelos.{Cliente, Producto}
-import app.servicios.{ClienteService, ProductoService}
-import scala.io.StdIn.readLine
+import app.modelos.ItemCarrito
+import app.servicios._
 
 object Main extends App {
 
-  // INICIO
-  println("====================================")
-  println("  Sistema de Recomendacion Tech")
-  println("====================================")
+    // Modo comando: Python llama con argumentos
+    // sbt run -- listar
+    // sbt run -- listar laptop
+    // sbt run -- reporte
+    if (args.nonEmpty) {
+        args(0) match {
+            case "listar" =>
+                if (args.length > 1) CatalogoService.mostrarTabla(CatalogoService.porCategoria(args(1)))
+                else                 CatalogoService.mostrarTabla(CatalogoService.productos)
 
-  // Ingreso de datos
-  val nombre      = readLine("Ingresa tu nombre: ")
-  val presupuesto = readLine("Presupuesto en soles: ").toInt
-  val categoria   = readLine("Categoria (laptop/celular/tablet/audifono/smartwatch/accesorio): ")
-  val uso         = readLine("Uso (estudio/trabajo/gaming/casual): ")
+            case "reporte" =>
+                ReporteService.mostrarStockBajo(CatalogoService.productos)
+                ReporteService.mostrarResumen(CatalogoService.productos)
 
-  // Creacion del cliente
-  val cliente = Cliente(nombre, presupuesto, categoria, uso)
+            case _ =>
+                println(s"Comando desconocido: ${args(0)}")
+        }
+        System.exit(0)
+    }
 
-  // Mostrar cliente
-  ClienteService.mostrar(cliente)
+    // Modo interactivo: se usa directo sin Python
+    println("=" * 50)
+    println("     TECHPOS - Sistema de Recomendacion")
+    println("=" * 50)
 
-  // Catalogo
-  val productos = List(
-    // Laptops
-    Producto("Laptop Lenovo IdeaPad", "Lenovo", 1800, "laptop", "estudio"),
-    Producto("Laptop HP 15",          "HP",     1500, "laptop", "estudio"),
-    Producto("Laptop Asus VivoBook",  "Asus",   1900, "laptop", "trabajo"),
-    Producto("Laptop Dell Inspiron",  "Dell",   2200, "laptop", "trabajo"),
-    // Celulares
-    Producto("iPhone 14",             "Apple",   3200, "celular", "casual"),
-    Producto("Samsung Galaxy A54",    "Samsung", 1200, "celular", "casual"),
-    Producto("Xiaomi Redmi Note 12",  "Xiaomi",   800, "celular", "casual"),
-    // Tablets
-    Producto("iPad Air",              "Apple",  2800, "tablet", "estudio"),
-    Producto("Samsung Galaxy Tab A8", "Samsung", 900, "tablet", "estudio"),
-    // Audifonos
-    Producto("Sony WH-1000XM5",       "Sony",   850, "audifono", "trabajo"),
-    Producto("JBL Tune 510BT",        "JBL",    250, "audifono", "casual"),
-    // Smartwatches
-    Producto("Apple Watch SE",        "Apple",  1100, "smartwatch", "casual"),
-    Producto("Samsung Galaxy Watch",  "Samsung", 750, "smartwatch", "casual"),
-    // Accesorios
-    Producto("Teclado Redragon K552", "Redragon", 250, "accesorio", "gaming"),
-    Producto("Mouse Logitech G305",   "Logitech", 180, "accesorio", "gaming")
-  )
+    var carrito: List[ItemCarrito] = List()
+    val cliente = ClienteService.registrar()
+    ClienteService.mostrar(cliente)
 
-  // FILTRAR
-  val filtrados = ProductoService.filtrar(productos, cliente)
+    var seguir = true
+    while (seguir) {
+        println("\n  ---- MENU ----")
+        println("  1. Ver catalogo")
+        println("  2. Ver por categoria")
+        println("  3. Agregar al carrito")
+        println("  4. Ver carrito")
+        println("  5. Eliminar del carrito")
+        println("  6. Reportes")
+        println("  7. Salir")
+        print("  Opcion: ")
 
-  // MOSTRAR FILTRADOS
-  ProductoService.mostrar(filtrados)
+        scala.io.StdIn.readLine().trim match {
+            case "1" =>
+                CatalogoService.mostrarTabla(CatalogoService.productos)
+
+            case "2" =>
+                val cat = Validacion.pedirOpcion(
+                    s"  Categoria (${CatalogoService.categorias.mkString("/")}): ",
+                    CatalogoService.categorias
+                )
+                CatalogoService.mostrarTabla(CatalogoService.porCategoria(cat))
+
+            case "3" =>
+                print("  Codigo del producto: ")
+                val codigo = scala.io.StdIn.readLine().trim
+                CatalogoService.buscarPorCodigo(codigo) match {
+                    case None    => println("  Codigo no encontrado.")
+                    case Some(p) =>
+                        val cant = Validacion.pedirEntero("  Cantidad: ", 1, p.stock)
+                        CarritoService.agregar(carrito, p, cant) match {
+                            case Left(e)  => println(s"  Error: $e")
+                            case Right(c) => carrito = c; println(s"  Agregado: ${p.nombre}")
+                        }
+                }
+
+            case "4" =>
+                CarritoService.mostrar(carrito, cliente.presupuesto)
+
+            case "5" =>
+                CarritoService.mostrar(carrito, cliente.presupuesto)
+                print("  Codigo a eliminar: ")
+                val cod = scala.io.StdIn.readLine().trim
+                carrito = CarritoService.eliminar(carrito, cod)
+                println("  Eliminado.")
+
+            case "6" =>
+                ReporteService.mostrarStockBajo(CatalogoService.productos)
+                ReporteService.mostrarResumen(CatalogoService.productos)
+
+            case "7" =>
+                seguir = false
+                println("\n  Hasta luego!")
+
+            case _ => println("  Opcion invalida.")
+        }
+    }
 }
