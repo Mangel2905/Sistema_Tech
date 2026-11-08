@@ -64,7 +64,7 @@ def mostrar_catalogo_categoria(cat):
 
 def mostrar_catalogo_completo():
     print("\n  ╔══════════════════════════════════════════════╗")
-    print("  ║         CATALOGO TECHPOS - 26 PRODUCTOS      ║")
+    print("  ║         CATALOGO TECHPOS - 42 PRODUCTOS      ║")
     print("  ╚══════════════════════════════════════════════╝")
     salida = listar_todo()
     for l in salida.strip().splitlines():
