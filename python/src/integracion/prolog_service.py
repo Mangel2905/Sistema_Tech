@@ -7,6 +7,8 @@ import os
 import shutil
 import subprocess
 
+from integracion import config
+
 BASE = os.path.dirname(__file__)
 CONSULTAS = os.path.abspath(os.path.join(BASE, "../../../prolog/consultas.pl"))
 
@@ -58,6 +60,7 @@ def _ejecutar(goal):
             encoding="utf-8",
             errors="replace",
             timeout=30,
+            env=config.entorno(),
         )
     except FileNotFoundError as e:
         raise PrologError("swipl no encontrado.") from e

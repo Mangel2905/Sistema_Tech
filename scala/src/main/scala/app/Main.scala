@@ -17,6 +17,7 @@ object Main extends App {
 
             case "reporte" =>
                 ReporteService.mostrarStockBajo(CatalogoService.productos)
+                ReporteService.mostrarAgotados(CatalogoService.productos)
                 ReporteService.mostrarResumen(CatalogoService.productos)
 
             // Salida JSON para Python (fuente unica del catalogo)
@@ -75,6 +76,7 @@ object Main extends App {
                 val codigo = scala.io.StdIn.readLine().trim
                 CatalogoService.buscarPorCodigo(codigo) match {
                     case None    => println("  Codigo no encontrado.")
+                    case Some(p) if p.stock <= 0 => println(s"  ${p.nombre} esta agotado.")
                     case Some(p) =>
                         val cant = Validacion.pedirEntero("  Cantidad: ", 1, p.stock)
                         CarritoService.agregar(carrito, p, cant) match {
@@ -95,6 +97,7 @@ object Main extends App {
 
             case "6" =>
                 ReporteService.mostrarStockBajo(CatalogoService.productos)
+                ReporteService.mostrarAgotados(CatalogoService.productos)
                 ReporteService.mostrarResumen(CatalogoService.productos)
 
             case "7" =>

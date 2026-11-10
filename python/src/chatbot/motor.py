@@ -15,7 +15,8 @@ import uuid
 from dataclasses import dataclass, field
 
 from chatbot import texto as tx
-from integracion import integrador, scala_service
+from integracion import integrador, inventario, scala_service
+from integracion.inventario import CompraRechazada
 from integracion.prolog_service import PrologError
 from integracion.scala_service import ScalaError
 from modelos.carrito import Carrito, StockInsuficiente
@@ -367,6 +368,9 @@ class Motor:
         if not p:
             r.aviso("No encontré ese producto.", "advertencia")
             return self._menu(s, r)
+        if p["stock"] <= 0:
+            r.aviso(f"{p['nombre']} está agotado. No se puede agregar al carrito.", "advertencia")
+            return self._menu(s, r)
         disp = s.carrito.disponible(p)
         if disp <= 0:
             r.aviso(f"Ya tienes en el carrito todo el stock de {p['nombre']} ({p['stock']} u.).",
@@ -385,6 +389,10 @@ class Motor:
         p = scala_service.producto(s.pendiente)
         cant = valor if isinstance(valor, int) else tx.detectar_entero(texto)
         disp = s.carrito.disponible(p)
+        if disp <= 0:   # se agoto mientras el cliente elegia la cantidad
+            s.estado, s.pendiente = "libre", None
+            r.aviso(f"{p['nombre']} ya no tiene stock disponible.", "advertencia")
+            return self._menu(s, r)
         if cant is None or not 1 <= cant <= disp:
             r.aviso(f"Indica una cantidad entre 1 y {disp}.", "advertencia")
             for n in range(1, min(disp, MAX_CHIPS_CANTIDAD) + 1):
@@ -409,7 +417,17 @@ class Motor:
         r.opcion("Seguir buscando", "menu")
         r.pedir("texto", "¿Algo más?")
 
+    def _sincronizar(self, s, r):
+        """Ajusta el carrito si el stock bajo (por ejemplo, otro cliente compro)."""
+        for c in s.carrito.sincronizar(inventario.stock_actual()):
+            if c["ahora"] == 0:
+                r.aviso(f"{c['nombre']} se agotó y lo quité de tu carrito.", "advertencia")
+            else:
+                r.aviso(f"Solo quedan {c['ahora']} unidades de {c['nombre']}; "
+                        f"ajusté tu carrito (tenías {c['antes']}).", "advertencia")
+
     def _ver_carrito(self, s, r):
+        self._sincronizar(s, r)
         if s.carrito.vacio():
             r.texto("Tu carrito está vacío. Mira tus recomendaciones o el catálogo para agregar productos.")
             return self._menu(s, r)
@@ -428,6 +446,7 @@ class Motor:
         r.texto("Estos son los reportes del inventario, generados por el módulo Scala:")
         r.reporte({
             "stock_bajo": datos["stockBajo"],
+            "agotados": datos.get("agotados", []),
             "resumen": [dict(x, etiqueta=tx.ETIQUETA_CATEGORIA.get(x["categoria"], x["categoria"]))
                         for x in datos["resumen"]],
         })
@@ -435,6 +454,9 @@ class Motor:
 
     # ── compra ──
     def _finalizar(self, s, r):
+        if not s.carrito.vacio():
+            scala_service.invalidar_cache()   # stock fresco (pudo comprarse desde otra app)
+            self._sincronizar(s, r)
         if s.carrito.vacio():
             r.texto("Tu carrito está vacío. Agrega productos antes de finalizar.")
             return self._menu(s, r)
@@ -451,6 +473,12 @@ class Motor:
     def _paso_confirmar(self, s, r, texto, accion):
         if accion == "confirmar" or tx.es_si(texto):
             total = s.carrito.total()
+            try:
+                inventario.registrar_compra(list(s.carrito))   # descuenta el stock (todo o nada)
+            except CompraRechazada:
+                r.aviso("El stock cambió mientras comprabas, así que no se cobró nada. "
+                        "Revisa el resumen actualizado.", "advertencia")
+                return self._finalizar(s, r)
             s.carrito.vaciar()
             s.estado = "libre"
             r.aviso(f"¡Compra realizada con éxito! Total pagado: {soles(total)}", "exito")

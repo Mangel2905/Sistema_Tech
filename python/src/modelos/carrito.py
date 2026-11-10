@@ -36,6 +36,8 @@ class Carrito:
         cantidad = int(cantidad)
         if cantidad <= 0:
             raise ValueError("La cantidad debe ser mayor a 0.")
+        if producto["stock"] <= 0:
+            raise StockInsuficiente(f"{producto.get('nombre', producto['codigo'])} está agotado.")
         disp = self.disponible(producto)
         if cantidad > disp:
             raise StockInsuficiente(f"Stock insuficiente. Puedes agregar como maximo {max(disp, 0)}.")
@@ -63,6 +65,25 @@ class Carrito:
 
     def vaciar(self):
         self.items.clear()
+
+    def sincronizar(self, stock_actual):
+        """Ajusta el carrito al stock actual {codigo: stock}.
+
+        Si otro cliente compro y ya no alcanza, baja la cantidad a lo que queda
+        o quita el producto si se agoto. Devuelve los cambios hechos:
+        [{'nombre', 'antes', 'ahora'}]  (ahora == 0 significa que se quito).
+        """
+        cambios = []
+        for item in list(self.items):
+            stock = max(stock_actual.get(item["codigo"], 0), 0)
+            item["stock"] = stock
+            if item["cantidad"] > stock:
+                cambios.append({"nombre": item["nombre"], "antes": item["cantidad"], "ahora": stock})
+                if stock == 0:
+                    self.items.remove(item)
+                else:
+                    item["cantidad"] = stock
+        return cambios
 
     # ── calculos ──
     def subtotal(self):

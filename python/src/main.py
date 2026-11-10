@@ -8,6 +8,7 @@ from modelos.carrito import Carrito, IGV_PORCENTAJE
 from integracion.prolog_service import PrologError
 from integracion.scala_service import ScalaError, listar_todo, listar_categoria, reporte
 from integracion.integrador import buscar_recomendaciones, mostrar_productos, extras
+from integracion.inventario import CompraRechazada, registrar_compra, stock_actual
 
 # carrito de la sesion de consola
 carrito = Carrito()
@@ -291,9 +292,18 @@ def finalizar_compra(cliente):
     separador()
     confirmar = pedir_opcion("\n  ¿Confirmar compra? (s/n): ", ["s", "n"])
     if confirmar == "s":
+        try:
+            registrar_compra(list(carrito))   # descuenta el stock en datos/stock.csv
+        except CompraRechazada as e:
+            print(f"\n  ⚠ No se realizo la compra: {e}")
+            for c in carrito.sincronizar(stock_actual()):
+                accion = "quitado (agotado)" if c['ahora'] == 0 else f"ajustado a {c['ahora']}"
+                print(f"    - {c['nombre']}: {accion}")
+            print("  Revisa tu carrito y vuelve a finalizar la compra.")
+            return
         print("\n  ✓ ¡Compra realizada con exito!")
         print(f"  Gracias por tu compra, {cliente.nombre}. ¡Vuelve pronto!")
-        carrito.clear()
+        carrito.vaciar()
     else:
         print("\n  Compra cancelada. Tu carrito sigue igual.")
 

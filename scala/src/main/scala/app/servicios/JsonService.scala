@@ -33,6 +33,7 @@ object JsonService {
             val barato = r.masBarato.map(producto).getOrElse("null")
             s"""{"categoria":${texto(r.categoria)},"cantidad":${r.cantidad},"masCaro":${producto(r.masCaro)},"masBarato":$barato}"""
         }.mkString("[", ",", "]")
-        s"""{"stockBajo":$stockBajo,"resumen":$resumen}"""
+        val agotados = productos(ReporteService.agotados(lista))
+        s"""{"stockBajo":$stockBajo,"agotados":$agotados,"resumen":$resumen}"""
     }
 }

@@ -9,6 +9,8 @@ import shutil
 import subprocess
 from functools import lru_cache
 
+from integracion import config
+
 SCALA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../scala"))
 JAR_PATH = os.path.join(SCALA_DIR, "target", "out", "jvm", "scala-2.13.12", "sistema-tech",
                         "Sistema-Tech-assembly-0.1.0.jar")
@@ -42,6 +44,7 @@ def _ejecutar(args):
             errors="replace",
             timeout=30,
             cwd=SCALA_DIR,
+            env=config.entorno(),
         )
     except subprocess.TimeoutExpired as e:
         raise ScalaError("Scala tardo demasiado.") from e
@@ -84,8 +87,15 @@ def producto(codigo):
 
 @lru_cache(maxsize=1)
 def reportes():
-    """{'stockBajo': [...], 'resumen': [{'categoria', 'cantidad', 'masCaro', 'masBarato'}]}"""
+    """{'stockBajo': [...], 'agotados': [...], 'resumen': [{'categoria', 'cantidad', 'masCaro', 'masBarato'}]}"""
     return _json(["reporte-json"])
+
+
+def invalidar_cache():
+    """Olvida catalogo y reportes en memoria (se llama cuando cambia el stock)."""
+    _catalogo_cache.cache_clear()
+    _indice.cache_clear()
+    reportes.cache_clear()
 
 
 # ── salida en texto (modo consola original) ──

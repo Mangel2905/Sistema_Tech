@@ -72,3 +72,23 @@ El chat responde con mensajes tipados (`texto`, `aviso`, `productos`, `carrito`,
 - **Alternativas (Prolog):** si no hay coincidencias exactas, productos entre el presupuesto y el presupuesto + 20 %.
 - **Carrito (Python y Scala, misma regla):** IGV = 18 % del subtotal (truncado), TOTAL = subtotal + IGV,
   RESTANTE = presupuesto − TOTAL.
+
+## Stock e inventario
+
+El stock inicial está en `prolog/hechos.pl` y en `CatalogoService.scala`. Al **confirmar una compra**, Python
+descuenta las unidades y guarda el stock actual en `datos/stock.csv` (`codigo,stock`). Prolog (`consultas.pl`)
+y Scala (`StockService`) leen ese archivo en cada ejecución, de modo que:
+
+- Prolog deja de recomendar productos agotados (regla `disponible/1`).
+- Scala muestra el stock real en el catálogo y en los reportes (sección **Agotados**).
+- No se puede agregar al carrito un producto agotado ni más unidades de las que quedan.
+- Si el stock cambia mientras alguien compra (otro cliente compró antes), el carrito se ajusta y la compra
+  no se cobra hasta que se confirme de nuevo. La compra es *todo o nada*.
+
+La ruta del archivo puede cambiarse con la variable de entorno `TECHPOS_STOCK` (las pruebas usan una temporal).
+Para volver al stock inicial:
+
+```bash
+cd python/src
+python -m integracion.inventario --reiniciar
+```

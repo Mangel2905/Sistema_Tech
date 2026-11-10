@@ -254,6 +254,15 @@ const RENDER = {
             el("span", { text: p.nombre }),
             el("span", { class: "pastilla", text: `${p.stock} u.` }))))
         : el("p", { class: "tarjeta-meta", style: "padding:0 16px 14px", text: "Todo bien con el stock." })),
+    m.agotados?.length
+      ? el("section", { class: "tarjeta", "aria-label": "Agotados" },
+          el("div", { class: "tarjeta-cab" },
+            el("h3", { class: "tarjeta-titulo", text: "Agotados" }),
+            el("span", { class: "tarjeta-meta", text: `${m.agotados.length} productos` })),
+          el("ul", { class: "reporte-lista" }, m.agotados.map((p) => el("li", {},
+            el("span", { text: p.nombre }),
+            el("span", { class: "pastilla pastilla-agotado", text: "0 u." })))))
+      : null,
     el("section", { class: "tarjeta", "aria-label": "Resumen por categoría" },
       el("div", { class: "tarjeta-cab" }, el("h3", { class: "tarjeta-titulo", text: "Resumen por categoría" })),
       el("div", { class: "tabla-scroll" },
@@ -273,26 +282,46 @@ function fila(etiqueta, valor, claseFila, claseValor) {
   return el("div", { class: claseFila }, el("span", { text: etiqueta }), el("span", { class: claseValor, text: valor }));
 }
 
+/* Estado de stock de un producto para esta sesión:
+   agotado   → stock 0 en el inventario (nadie puede agregarlo)
+   enCarrito → hay stock, pero el cliente ya tiene todo en su carrito */
+function estadoStock(p) {
+  if (p.stock <= 0) return { bloqueado: true, texto: "Agotado", motivo: "Producto agotado" };
+  if (p.disponible <= 0) return { bloqueado: true, texto: "En carrito", motivo: "Ya tienes todo el stock en tu carrito" };
+  return { bloqueado: false };
+}
+
+function textoStock(p) {
+  return p.stock <= 0 ? "Agotado" : `Stock: ${p.stock}`;
+}
+
+function claseStock(p) {
+  return "stock" + (p.stock <= 0 ? " stock-agotado" : p.stock <= 3 ? " stock-bajo" : "");
+}
+
 function botonAgregar(p, compacto) {
-  const sin = p.disponible <= 0;
+  const est = estadoStock(p);
   const props = {
     type: "button",
     class: compacto ? "btn-mini" : "btn-agregar",
-    disabled: sin || null,
-    title: sin ? "Ya tienes todo el stock en el carrito" : "Agregar al carrito",
-    "aria-label": sin ? `${p.nombre}: sin stock disponible` : `Agregar ${p.nombre} al carrito`,
+    disabled: est.bloqueado || null,
+    title: est.bloqueado ? est.motivo : "Agregar al carrito",
+    "aria-label": est.bloqueado ? `${p.nombre}: ${est.motivo.toLowerCase()}` : `Agregar ${p.nombre} al carrito`,
     onclick: () => enviar({ accion: "agregar", valor: p.codigo, etiqueta: `Agregar ${p.nombre}` }),
   };
-  return compacto ? el("button", props, icono("plus")) : el("button", props, icono("plus"), "Agregar");
+  if (compacto) return el("button", props, icono(est.bloqueado ? "x" : "plus"));
+  return est.bloqueado
+    ? el("button", props, est.texto)
+    : el("button", props, icono("plus"), "Agregar");
 }
 
 function cuadricula(m) {
-  const tarjetas = m.productos.map((p) => el("article", { class: "producto" },
+  const tarjetas = m.productos.map((p) => el("article", { class: "producto" + (p.stock <= 0 ? " producto-agotado" : "") },
     el("span", { class: "producto-etq", text: `${p.marca} · ${p.uso}` }),
     el("h4", { class: "producto-nombre", text: p.nombre }),
     el("span", { class: "producto-precio", text: soles(p.precio) }),
     el("div", { class: "producto-pie" },
-      el("span", { class: "stock" + (p.stock <= 3 ? " stock-bajo" : ""), text: `Stock: ${p.stock}` }),
+      el("span", { class: claseStock(p), text: textoStock(p) }),
       m.agregable ? botonAgregar(p, false) : null)));
   return el("section", { "aria-label": m.titulo || "Productos" },
     m.titulo ? el("div", { class: "tarjeta-cab", style: "padding:0 2px 8px" },
@@ -310,10 +339,11 @@ function catalogoAgrupado(m) {
       el("span", { class: "tarjeta-meta", text: `${m.productos.length} productos` })),
     Object.entries(grupos).map(([cat, lista]) => el("div", { class: "grupo" },
       el("h4", { class: "grupo-titulo", text: ETIQUETAS[cat] || cat }),
-      lista.map((p) => el("div", { class: "fila" },
+      lista.map((p) => el("div", { class: "fila" + (p.stock <= 0 ? " producto-agotado" : "") },
         el("div", {},
           el("span", { class: "fila-nombre", text: p.nombre }),
-          el("span", { class: "fila-sub", text: `${p.marca} · ${p.uso} · stock ${p.stock}` })),
+          el("span", { class: "fila-sub" }, `${p.marca} · ${p.uso} · `,
+            el("span", { class: claseStock(p), text: p.stock <= 0 ? "agotado" : `stock ${p.stock}` }))),
         el("span", { class: "fila-precio", text: soles(p.precio) }),
         m.agregable ? botonAgregar(p, true) : el("span"))))));
 }

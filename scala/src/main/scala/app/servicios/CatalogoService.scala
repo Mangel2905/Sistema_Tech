@@ -4,7 +4,14 @@ import app.modelos.Producto
 
 object CatalogoService {
 
-    val productos: List[Producto] = List(
+    // Catalogo con el stock ACTUAL (stock inicial + compras registradas por Python)
+    lazy val productos: List[Producto] = {
+        val stockActual = StockService.cargar()
+        base.map(p => stockActual.get(p.codigo).fold(p)(s => p.copy(stock = s)))
+    }
+
+    // Datos de los productos con el stock INICIAL
+    val base: List[Producto] = List(
 
         // LAPTOPS (estudio, trabajo, gaming)
         Producto("laptop_acer_asp3",    "Acer Aspire 3",           "Acer",    1200, "laptop", "estudio", 7),

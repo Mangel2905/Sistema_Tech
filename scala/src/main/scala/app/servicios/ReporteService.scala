@@ -9,6 +9,17 @@ object ReporteService {
     def stockBajo(productos: List[Producto]): List[Producto] =
         productos.filter(p => p.stock > 0 && p.stock <= 3).sortBy(_.stock)
 
+    def agotados(productos: List[Producto]): List[Producto] =
+        productos.filter(_.stock <= 0)
+
+    def mostrarAgotados(productos: List[Producto]): Unit = {
+        val lista = agotados(productos)
+        if (lista.nonEmpty) {
+            println("\n  === Agotados ===")
+            lista.foreach(p => println(f"  ${p.nombre}%-32s  S/${p.precio}"))
+        }
+    }
+
     def resumen(productos: List[Producto]): List[ResumenCategoria] =
         productos.groupBy(_.categoria).toList.sortBy(_._1).map { case (cat, lista) =>
             ResumenCategoria(cat, lista.size, lista.maxBy(_.precio), lista.filter(_.stock > 0).minByOption(_.precio))

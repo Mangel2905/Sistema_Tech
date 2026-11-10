@@ -4,20 +4,31 @@ Ejecutar desde la carpeta python:   python -m pytest -q
 """
 import os
 import sys
+import tempfile
 
 import pytest
 
+# Las pruebas compran productos: usan un archivo de stock temporal, nunca datos/stock.csv
+os.environ["TECHPOS_STOCK"] = os.path.join(tempfile.mkdtemp(prefix="techpos-test-"), "stock.csv")
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 from fastapi.testclient import TestClient  # noqa: E402
 
 from api.app import app  # noqa: E402
 from chatbot import texto as tx  # noqa: E402
-from integracion import prolog_service as ps, scala_service  # noqa: E402
+from integracion import inventario, prolog_service as ps, scala_service  # noqa: E402
 from modelos.carrito import Carrito, StockInsuficiente  # noqa: E402
 from modelos.cliente import Cliente  # noqa: E402
 
 client = TestClient(app)
+
+
+@pytest.fixture(autouse=True)
+def stock_inicial():
+    """Cada prueba empieza con el stock inicial."""
+    inventario.reiniciar()
+    yield
+    inventario.reiniciar()
 
 
 # ── mejora 6: escape de atomos ──
@@ -123,3 +134,83 @@ def test_endpoints_rest():
                     json={"presupuesto": 1000, "categoria": "laptop", "uso": "estudio"}).json()
     assert r["es_alternativa"] is True and r["productos"][0]["codigo"] == "laptop_acer_asp3"
     assert client.post("/api/chat", json={"sesion_id": "nope"}).status_code == 404
+
+
+# ── descuento de stock al comprar ──
+
+def _sesion_registrada(nombre="Ana", presupuesto="9000", categoria="laptop", uso="estudio"):
+    sid = client.post("/api/chat/sesion").json()["sesion_id"]
+    for paso in [nombre, presupuesto, categoria, uso, "ninguna"]:
+        _enviar(sid, paso)
+    return sid
+
+
+def _avisos(resp):
+    return " | ".join(m["texto"] for m in resp["mensajes"] if m["tipo"] == "aviso")
+
+
+def test_compra_descuenta_stock_en_prolog_y_scala():
+    sid = _sesion_registrada()
+    _enviar(sid, accion="agregar", valor="laptop_acer_asp3")
+    _enviar(sid, accion="cantidad", valor=2)
+    _enviar(sid, accion="finalizar")
+    r = _enviar(sid, accion="confirmar")
+    assert "Compra realizada" in _avisos(r)
+
+    assert scala_service.producto("laptop_acer_asp3")["stock"] == 5           # Scala
+    assert ps.verificar_stock("laptop_acer_asp3") == {"disponible": True, "stock": 5}   # Prolog
+    assert os.path.exists(os.environ["TECHPOS_STOCK"])
+
+
+def test_producto_agotado_no_se_recomienda_ni_se_agrega():
+    inventario.registrar_compra([{"codigo": "laptop_dell_ins15", "cantidad": 2, "nombre": "Dell"}])
+
+    # Prolog ya no lo recomienda (unica laptop de trabajo)
+    assert ps.recomendar(Cliente("x", 3000, "laptop", "trabajo")) == []
+    assert ps.verificar_stock("laptop_dell_ins15")["disponible"] is False
+    # Scala lo marca agotado y lo saca del catalogo por categoria
+    assert scala_service.producto("laptop_dell_ins15")["stock"] == 0
+    assert "laptop_dell_ins15" not in [p["codigo"] for p in scala_service.catalogo("laptop")]
+    assert [p["codigo"] for p in scala_service.reportes()["agotados"]] == ["laptop_dell_ins15"]
+
+    # El chat no permite agregarlo
+    sid = _sesion_registrada()
+    r = _enviar(sid, accion="agregar", valor="laptop_dell_ins15")
+    assert "agotado" in _avisos(r) and r["carrito"]["unidades"] == 0
+    # El carrito tampoco
+    with pytest.raises(StockInsuficiente):
+        Carrito().agregar(scala_service.producto("laptop_dell_ins15"), 1)
+    # Y una compra directa se rechaza sin tocar el stock
+    with pytest.raises(inventario.CompraRechazada):
+        inventario.registrar_compra([{"codigo": "laptop_dell_ins15", "cantidad": 1}])
+    assert scala_service.producto("laptop_dell_ins15")["stock"] == 0
+
+
+def test_carrito_se_ajusta_si_otro_cliente_compra_antes():
+    sid = _sesion_registrada(categoria="tablet", uso="trabajo")
+    _enviar(sid, accion="agregar", valor="tab_samsung_s7")      # stock 2
+    _enviar(sid, accion="cantidad", valor=2)
+
+    inventario.registrar_compra([{"codigo": "tab_samsung_s7", "cantidad": 1}])   # otro cliente
+
+    r = _enviar(sid, accion="finalizar")
+    assert "Solo quedan 1" in _avisos(r) and r["carrito"]["unidades"] == 1
+    _enviar(sid, accion="confirmar")
+    assert scala_service.producto("tab_samsung_s7")["stock"] == 0
+
+
+def test_confirmacion_rechazada_si_el_stock_cambia_en_el_ultimo_momento():
+    sid = _sesion_registrada()
+    _enviar(sid, accion="agregar", valor="laptop_acer_asp3")    # stock 7
+    _enviar(sid, accion="cantidad", valor=2)
+    _enviar(sid, accion="finalizar")                            # resumen mostrado
+
+    inventario.registrar_compra([{"codigo": "laptop_acer_asp3", "cantidad": 6}])   # quedan 1
+
+    r = _enviar(sid, accion="confirmar")
+    assert "no se cobró nada" in _avisos(r)
+    assert r["carrito"]["unidades"] == 1
+    assert scala_service.producto("laptop_acer_asp3")["stock"] == 1   # nada descontado
+    r = _enviar(sid, accion="confirmar")
+    assert "Compra realizada" in _avisos(r)
+    assert scala_service.producto("laptop_acer_asp3")["stock"] == 0
