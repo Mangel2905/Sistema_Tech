@@ -4,7 +4,11 @@ import app.modelos.{Producto, ItemCarrito}
 
 object CarritoService {
 
-    val IGV = 0.18
+    // Regla unica (igual en Python):
+    //   IGV      = 18% del subtotal, truncado a soles enteros
+    //   TOTAL    = subtotal + IGV
+    //   RESTANTE = presupuesto - TOTAL   (lo que realmente paga el cliente)
+    val IGV_PORCENTAJE = 18
 
     def agregar(carrito: List[ItemCarrito], producto: Producto, cantidad: Int): Either[String, List[ItemCarrito]] = {
         val yaEnCarrito = carrito.filter(_.producto.codigo == producto.codigo).map(_.cantidad).sum
@@ -23,9 +27,9 @@ object CarritoService {
         carrito.filterNot(_.producto.codigo == codigo)
 
     def subtotal(carrito: List[ItemCarrito]): Int  = carrito.map(_.subtotal).sum
-    def igv(carrito: List[ItemCarrito]): Int       = (subtotal(carrito) * IGV).toInt
+    def igv(carrito: List[ItemCarrito]): Int       = subtotal(carrito) * IGV_PORCENTAJE / 100
     def total(carrito: List[ItemCarrito]): Int     = subtotal(carrito) + igv(carrito)
-    def restante(presupuesto: Int, carrito: List[ItemCarrito]): Int = presupuesto - subtotal(carrito)
+    def restante(presupuesto: Int, carrito: List[ItemCarrito]): Int = presupuesto - total(carrito)
 
     def mostrar(carrito: List[ItemCarrito], presupuesto: Int): Unit = {
         if (carrito.isEmpty) { println("  Carrito vacio."); return }

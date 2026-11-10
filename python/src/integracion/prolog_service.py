@@ -1,9 +1,19 @@
-import subprocess
+"""Puente Python -> Prolog (SWI-Prolog por linea de comandos).
+
+Cada consulta lanza `swipl` con un objetivo de consultas.pl y lee su salida,
+una linea por producto con el formato  codigo|precio|categoria|uso|stock.
+"""
 import os
 import shutil
+import subprocess
 
 BASE = os.path.dirname(__file__)
 CONSULTAS = os.path.abspath(os.path.join(BASE, "../../../prolog/consultas.pl"))
+
+
+class PrologError(RuntimeError):
+    """Prolog no esta disponible o la consulta fallo."""
+
 
 def _swipl_cmd():
     cmd = shutil.which("swipl")
@@ -19,25 +29,45 @@ def _swipl_cmd():
             return ruta
     return None
 
+
+def atomo(valor):
+    """Convierte cualquier texto en un atomo Prolog entre comillas simples.
+
+    Escapa la barra invertida y la comilla simple, de modo que entradas como
+    "O'Brien" o "a') , halt, ('" no rompen ni alteran el objetivo.
+    """
+    texto = str(valor).replace("\\", "\\\\").replace("'", "\\'")
+    texto = texto.replace("\n", " ").replace("\r", " ")
+    return f"'{texto}'"
+
+
+def entero(valor):
+    """Garantiza que el valor sea un entero (nunca texto libre) en el objetivo."""
+    return str(int(valor))
+
+
 def _ejecutar(goal):
     swipl = _swipl_cmd()
     if swipl is None:
-        print("  [Error] swipl no encontrado. Instala SWI-Prolog.")
-        return ""
+        raise PrologError("swipl no encontrado. Instala SWI-Prolog y agregalo al PATH.")
     try:
         result = subprocess.run(
             [swipl, "-q", "-f", CONSULTAS, "-g", goal, "-t", "halt"],
             capture_output=True,
             text=True,
-            timeout=30
+            encoding="utf-8",
+            errors="replace",
+            timeout=30,
         )
-        return result.stdout
-    except FileNotFoundError:
-        print("  [Error] swipl no encontrado.")
-        return ""
-    except subprocess.TimeoutExpired:
-        print("  [Error] Prolog tardo demasiado.")
-        return ""
+    except FileNotFoundError as e:
+        raise PrologError("swipl no encontrado.") from e
+    except subprocess.TimeoutExpired as e:
+        raise PrologError("Prolog tardo demasiado.") from e
+    if result.returncode != 0:
+        error = result.stderr.strip().splitlines()
+        raise PrologError(error[-1] if error else f"Prolog termino con codigo {result.returncode}")
+    return result.stdout
+
 
 def _parsear(linea):
     partes = linea.strip().split("|")
@@ -47,44 +77,54 @@ def _parsear(linea):
             "precio": int(partes[1]),
             "categoria": partes[2],
             "uso": partes[3],
-            "stock": int(partes[4])
+            "stock": int(partes[4]),
         }
     return None
 
-def recomendar(cliente):
-    goal = f"recomendar_cliente('{cliente.nombre}',{cliente.presupuesto},'{cliente.categoria}','{cliente.uso}','{cliente.marca}')"
+
+def _lista(goal):
     salida = _ejecutar(goal)
     return [p for p in (_parsear(l) for l in salida.splitlines()) if p]
+
+
+def _args_cliente(cliente):
+    return ",".join([
+        atomo(cliente.nombre),
+        entero(cliente.presupuesto),
+        atomo(cliente.categoria),
+        atomo(cliente.uso),
+        atomo(cliente.marca),
+    ])
+
+
+def recomendar(cliente):
+    return _lista(f"recomendar_cliente({_args_cliente(cliente)})")
+
 
 def alternativas(cliente):
-    goal = f"alternativas_cliente('{cliente.nombre}',{cliente.presupuesto},'{cliente.categoria}','{cliente.uso}','{cliente.marca}')"
-    salida = _ejecutar(goal)
-    return [p for p in (_parsear(l) for l in salida.splitlines()) if p]
+    return _lista(f"alternativas_cliente({_args_cliente(cliente)})")
+
 
 def catalogo_categoria(categoria):
-    goal = f"catalogo_categoria('{categoria}')"
-    salida = _ejecutar(goal)
-    return [p for p in (_parsear(l) for l in salida.splitlines()) if p]
+    return _lista(f"catalogo_categoria({atomo(categoria)})")
+
 
 def verificar_stock(codigo):
-    goal = f"verificar_stock({codigo})"
-    salida = _ejecutar(goal)
-    linea = salida.strip()
+    linea = _ejecutar(f"verificar_stock({atomo(codigo)})").strip()
     if linea.startswith("disponible"):
-        partes = linea.split("|")
-        return {"disponible": True, "stock": int(partes[1])}
+        return {"disponible": True, "stock": int(linea.split("|")[1])}
     return {"disponible": False, "stock": 0}
 
+
 def extras():
-    salida = _ejecutar("extras")
     resultado = []
-    for l in salida.splitlines():
+    for l in _ejecutar("extras").splitlines():
         partes = l.strip().split("|")
         if len(partes) == 4:
             resultado.append({
                 "codigo": partes[0],
                 "precio": int(partes[1]),
                 "categoria": partes[2],
-                "stock": int(partes[3])
+                "stock": int(partes[3]),
             })
     return resultado

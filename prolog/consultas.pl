@@ -34,7 +34,7 @@ alternativas_cliente(Nombre, Monto, Cat, Uso, Marca) :-
 catalogo_categoria(Cat) :-
     forall(
         listar_categoria(Cat, P),
-        (precio(P,Pre), uso(P,U), marca(P,M), stock(P,S),
+        (precio(P,Pre), uso(P,U), stock(P,S),
          format("~w|~w|~w|~w|~w~n", [P,Pre,Cat,U,S]))
     ).
 

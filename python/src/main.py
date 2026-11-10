@@ -4,13 +4,13 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 
 from modelos.cliente import Cliente
-from integracion.prolog_service import recomendar, alternativas, extras, catalogo_categoria
-from integracion.scala_service import listar_todo, listar_categoria, reporte
-from integracion.integrador import buscar_recomendaciones, mostrar_productos, nombre
+from modelos.carrito import Carrito, IGV_PORCENTAJE
+from integracion.prolog_service import PrologError
+from integracion.scala_service import ScalaError, listar_todo, listar_categoria, reporte
+from integracion.integrador import buscar_recomendaciones, mostrar_productos, extras
 
-# carrito global, lista de productos agregados
-carrito = []
-IGV = 0.18
+# carrito de la sesion de consola
+carrito = Carrito()
 
 # ── helpers de entrada ──────────────────────
 
@@ -84,15 +84,14 @@ def agregar_al_carrito(productos, cliente):
 
     print()
     for i, p in enumerate(productos, 1):
-        print(f"  {i}. {nombre(p['codigo'])} - S/{p['precio']} (stock: {p['stock']})")
+        print(f"  {i}. {p['nombre']} - S/{p['precio']} (stock: {p['stock']})")
 
     num = pedir_entero("  Numero del producto (0 para cancelar): ", 0, len(productos))
     if num == 0:
         return
 
     p = productos[num - 1]
-    ya_en_carrito = sum(item['cantidad'] for item in carrito if item['codigo'] == p['codigo'])
-    disponible_real = p['stock'] - ya_en_carrito
+    disponible_real = carrito.disponible(p)
 
     if disponible_real <= 0:
         print(f"  Ya tienes todo el stock en el carrito ({p['stock']} unidades).")
@@ -104,24 +103,12 @@ def agregar_al_carrito(productos, cliente):
             break
         print(f"  No hay stock suficiente. Maximo: {disponible_real}.")
 
-    # si ya existe en carrito, suma la cantidad
-    existente = next((item for item in carrito if item['codigo'] == p['codigo']), None)
-    if existente:
-        existente['cantidad'] += cant
-    else:
-        carrito.append({
-            'codigo': p['codigo'],
-            'nombre': nombre(p['codigo']),
-            'precio': p['precio'],
-            'cantidad': cant,
-            'stock': p['stock']
-        })
+    carrito.agregar(p, cant)
+    print(f"  ✓ Agregado: {p['nombre']} x{cant}")
 
-    print(f"  ✓ Agregado: {nombre(p['codigo'])} x{cant}")
-
-    total_actual = sum(item['precio'] * item['cantidad'] for item in carrito)
-    if total_actual > cliente.presupuesto:
-        print(f"  ⚠ El carrito supera tu presupuesto en S/{total_actual - cliente.presupuesto}.")
+    restante = carrito.restante(cliente.presupuesto)
+    if restante < 0:
+        print(f"  ⚠ El total (con IGV) supera tu presupuesto en S/{-restante}.")
 
 def ver_carrito(cliente):
     if not carrito:
@@ -134,25 +121,19 @@ def ver_carrito(cliente):
     print(f"  {'#':<4} {'Producto':<30} {'P.Unit':>7}  {'Cant':>4}  {'Subtotal':>9}")
     separador()
 
-    subtotal = 0
-    for i, item in enumerate(carrito, 1):
-        sub = item['precio'] * item['cantidad']
-        subtotal += sub
-        print(f"  {i:<4} {item['nombre']:<30} S/{item['precio']:>5}  {item['cantidad']:>4}  S/{sub:>7}")
-
-    igv = subtotal * IGV
-    total = subtotal + igv
-    restante = cliente.presupuesto - int(total)
+    r = carrito.resumen(cliente.presupuesto)
+    for i, item in enumerate(r['items'], 1):
+        print(f"  {i:<4} {item['nombre']:<30} S/{item['precio']:>5}  {item['cantidad']:>4}  S/{item['subtotal']:>7}")
 
     separador()
-    print(f"  {'Subtotal:':<40} S/{subtotal:>7}")
-    print(f"  {'IGV (18%):':<40} S/{igv:>7.0f}")
-    print(f"  {'TOTAL:':<40} S/{total:>7.0f}")
-    print(f"  {'Presupuesto:':<40} S/{cliente.presupuesto:>7}")
-    if restante >= 0:
-        print(f"  {'Restante:':<40} S/{restante:>7}")
+    print(f"  {'Subtotal:':<40} S/{r['subtotal']:>7}")
+    print(f"  {f'IGV ({IGV_PORCENTAJE}%):':<40} S/{r['igv']:>7}")
+    print(f"  {'TOTAL:':<40} S/{r['total']:>7}")
+    print(f"  {'Presupuesto:':<40} S/{r['presupuesto']:>7}")
+    if r['restante'] >= 0:
+        print(f"  {'Restante:':<40} S/{r['restante']:>7}")
     else:
-        print(f"  {'Excede en:':<40} S/{-restante:>7}")
+        print(f"  {'Excede en:':<40} S/{-r['restante']:>7}")
 
 def eliminar_del_carrito():
     if not carrito:
@@ -166,7 +147,7 @@ def eliminar_del_carrito():
     num = pedir_entero("  Numero a eliminar (0 para cancelar): ", 0, len(carrito))
     if num == 0:
         return
-    eliminado = carrito.pop(num - 1)
+    eliminado = carrito.eliminar_por_indice(num - 1)
     print(f"  ✓ Eliminado: {eliminado['nombre']}")
 
 # ── registro inicial ─────────────────────────
@@ -293,25 +274,19 @@ def finalizar_compra(cliente):
     print(f"  Presupuesto:  S/{cliente.presupuesto}")
     separador()
 
-    subtotal = 0
-    for i, item in enumerate(carrito, 1):
-        sub = item['precio'] * item['cantidad']
-        subtotal += sub
-        print(f"  {i}. {item['nombre']:<30} x{item['cantidad']}  S/{sub}")
-
-    igv     = subtotal * IGV
-    total   = subtotal + igv
-    restante = cliente.presupuesto - subtotal
+    r = carrito.resumen(cliente.presupuesto)
+    for i, item in enumerate(r['items'], 1):
+        print(f"  {i}. {item['nombre']:<30} x{item['cantidad']}  S/{item['subtotal']}")
 
     separador()
-    print(f"  Subtotal:        S/{subtotal}")
-    print(f"  IGV (18%):       S/{igv:.0f}")
-    print(f"  TOTAL A PAGAR:   S/{total:.0f}")
-    print(f"  Presupuesto:     S/{cliente.presupuesto}")
-    if restante >= 0:
-        print(f"  Vuelto/Restante: S/{restante}")
+    print(f"  Subtotal:        S/{r['subtotal']}")
+    print(f"  IGV ({IGV_PORCENTAJE}%):       S/{r['igv']}")
+    print(f"  TOTAL A PAGAR:   S/{r['total']}")
+    print(f"  Presupuesto:     S/{r['presupuesto']}")
+    if r['restante'] >= 0:
+        print(f"  Vuelto/Restante: S/{r['restante']}")
     else:
-        print(f"  Excede en:       S/{-restante}  ⚠")
+        print(f"  Excede en:       S/{-r['restante']}  ⚠")
 
     separador()
     confirmar = pedir_opcion("\n  ¿Confirmar compra? (s/n): ", ["s", "n"])
@@ -339,7 +314,16 @@ def menu(cliente):
   9. Salir
 """)
         op = pedir_opcion("  Opcion: ", ["1","2","3","4","5","6","7","8","9"])
+        if op == "9":
+            print("\n  ¡Hasta luego! Gracias por usar TechPOS.\n")
+            break
+        try:
+            ejecutar_opcion(op, cliente)
+        except (PrologError, ScalaError) as e:
+            print(f"\n  [Error] {e}")
 
+
+def ejecutar_opcion(op, cliente):
         if op == "1":
             mostrar_catalogo_completo()
         elif op == "2":
@@ -358,9 +342,6 @@ def menu(cliente):
             ver_reportes()
         elif op == "8":
             finalizar_compra(cliente)
-        elif op == "9":
-            print("\n  ¡Hasta luego! Gracias por usar TechPOS.\n")
-            break
 
 # ── arranque ─────────────────────────────────
 

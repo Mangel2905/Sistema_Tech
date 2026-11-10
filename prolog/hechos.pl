@@ -3,6 +3,10 @@
 :- dynamic uso_cliente/2.
 :- dynamic marca_cliente/2.
 
+% Los hechos de cada producto estan en una misma linea (precio, categoria, uso,
+% marca, stock); se declaran discontiguos para evitar las advertencias de SWI-Prolog.
+:- discontiguous precio/2, categoria/2, uso/2, marca/2, stock/2.
+
 % LAPTOPS
 precio(laptop_acer_asp3,   1200). categoria(laptop_acer_asp3,   laptop). uso(laptop_acer_asp3,   estudio). marca(laptop_acer_asp3,   acer).    stock(laptop_acer_asp3,   7).
 precio(laptop_hp_pav15,    1500). categoria(laptop_hp_pav15,    laptop). uso(laptop_hp_pav15,    estudio). marca(laptop_hp_pav15,    hp).      stock(laptop_hp_pav15,    4).

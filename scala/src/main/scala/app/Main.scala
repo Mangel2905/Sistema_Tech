@@ -19,6 +19,19 @@ object Main extends App {
                 ReporteService.mostrarStockBajo(CatalogoService.productos)
                 ReporteService.mostrarResumen(CatalogoService.productos)
 
+            // Salida JSON para Python (fuente unica del catalogo)
+            // java -jar app.jar json            -> catalogo completo
+            // java -jar app.jar json laptop     -> solo una categoria (con stock)
+            // java -jar app.jar reporte-json    -> stock bajo + resumen
+            case "json" =>
+                val lista =
+                    if (args.length > 1) CatalogoService.porCategoria(args(1))
+                    else                 CatalogoService.productos
+                println(JsonService.productos(lista))
+
+            case "reporte-json" =>
+                println(JsonService.reporte(CatalogoService.productos))
+
             case _ =>
                 println(s"Comando desconocido: ${args(0)}")
         }
